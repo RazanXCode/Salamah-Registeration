@@ -1,0 +1,175 @@
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+        "navbar  navbar"
+        "main   sidebar"
+        "footer footer";
+    min-height: 100vh;
+}
+
+
+nav {
+    grid-area: navbar;
+    font-size: 20px;
+    font-weight: bolder;
+    padding: auto;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    color: black;
+    text-align: center;
+    font-size: 16px;
+    width: 100%;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+#logo {
+
+    height: 140px;
+
+
+}
+
+aside {
+    grid-area: sidebar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#sidPic {
+    grid-area: sidebar;
+    width: 100%;
+
+    height: auto;
+    height: 100%;
+    object-fit: cover;
+}
+
+#sidPic {
+    width: 100%;
+    height: 100%;
+}
+
+
+form {
+    margin: 80px;
+    font-size: 24px;
+}
+
+legend {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 14px;
+    height: 13px;
+}
+
+
+
+
+#field-checkbox input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 12px;
+    padding: 10px;
+    width: 20px;
+}
+
+
+button {
+    color: white;
+    background-color: #4D7D7A;
+    display: block;
+    border: 9px solid #4D7D7A;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px;
+    width: 70%;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: hsl(177, 28%, 16%);
+    border: 9px solid hsl(177, 28%, 16%);
+}
+
+
+#fetchBtn {
+    width: 70%;
+    margin-top: 0;
+}
+
+#btn-submit {
+    width: 70%;
+}
+
+
+.loading-spinner {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #16669c;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 150s linear infinite;
+}
